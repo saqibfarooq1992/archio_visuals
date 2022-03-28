@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('location');
             $table->text('surface_area');
             $table->text('year_completed');
+            $table->text('gallery');
             $table->text('value');
             $table->text('architect');
             $table->text('short_description');
