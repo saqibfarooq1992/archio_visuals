@@ -5692,8 +5692,6 @@ header-style-seven .nav-toggler:hover{
 
 .project-block{
 	position: relative;
-	height: 470px;
-    width: 470px;
 }
 
 .project-block .image-box{
@@ -5716,7 +5714,7 @@ header-style-seven .nav-toggler:hover{
 	left: 0;
 	top: 0;
 	height: 100%;
-	width: 70%;
+	width: 100%;
 }
 
 .project-block .overlay-box h4{
