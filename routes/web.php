@@ -9,6 +9,9 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SpecializationController;
 use App\Http\Controllers\ExpertController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CompanyController;
 
 
 
@@ -40,6 +43,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('projects', ProjectController::class);
     Route::resource('specializations', SpecializationController::class);
     Route::resource('experts', ExpertController::class);
+    Route::resource('clients', ClientController::class);
+    Route::resource('blogs', BlogController::class);
+    Route::resource('companies', CompanyController::class);
 
 
 });

@@ -104,10 +104,10 @@
                               <a class="btn bg-gradient-danger w-100 mb-0 toast-btn" href="{{route('experts.index')}}" data-target="dangerToast">Profect Expert</a>
                           </div>
                           <div class="col-lg-4 col-sm-6 col-12">
-                            <a class="btn bg-gradient-success w-100 mb-0 toast-btn" href="{{route('abouts.index')}}">What Client Says</a>
+                            <a class="btn bg-gradient-success w-100 mb-0 toast-btn" href="{{route('clients.index')}}">What Client Says</a>
                           </div>
                           <div class="col-lg-4 col-sm-6 col-12 mt-sm-0 mt-2">
-                            <a class="btn bg-gradient-info w-100 mb-0 toast-btn" href="#">News & Articals</a>
+                            <a class="btn bg-gradient-info w-100 mb-0 toast-btn" href="{{route('blogs.index')}}">News & Articals</a>
                           </div>
                         </div>
 

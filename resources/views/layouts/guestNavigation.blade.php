@@ -1,12 +1,12 @@
 <!-- Main Header-->
-<header class="main-header header-style-four">
+    <header class="main-header header-style-four">
         <div class="header-top">
             <div class="auto-container clearfix">
                 <div class="top-right">
                     <ul class="contact-info">
                         <li><span>PHONE :</span> (+84) 867-557-243</li>
                         <li><span>EMAIL :</span> <a href="#">Support@yourdomain.com</a></li>
-                    </ul>  
+                    </ul>
                 </div>
             </div>
         </div>
@@ -21,12 +21,12 @@
                     <div class="nav-outer">
                         <nav class="main-menu navbar-expand-md ">
                             <div class="navbar-header">
-                                <!-- Toggle Button -->      
+                                <!-- Toggle Button -->
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="icon flaticon-menu-button"></span>
                                 </button>
                             </div>
-                            
+
                             <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
                                     <li class="current dropdown"><a href="{{url('/')}}">Home</a></li>
@@ -58,7 +58,7 @@
                                     <li><a href="{{url('contact-us')}}">Contact</a></li>
                                 </ul>
                             </div>
-                        </nav>                     
+                        </nav>
 
                         <!-- Outer Box-->
                         <div class="outer-box">

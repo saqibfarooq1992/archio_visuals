@@ -21,7 +21,7 @@
     <!--End Page Title-->
 
     <!-- About Section -->
-    <section class="about-section" style="background-image: url(images/background/1.jpg);">
+    <section class="about-section" style="background-image: url(storage/{{$about->background_image}});">
         <div class="auto-container">
             <div class="row no-gutters">
                 <!-- Image Column -->
@@ -144,52 +144,22 @@
 
             <div class="testimonial-carousel-two owl-carousel owl-theme">
                 <!-- Testimonial block two -->
-                <div class="testimonial-block-two">
-                    <div class="inner-box">
-                        <div class="text">I got an excellent design for my future home, from cooperation i was very pleased, everything was done at the highest level.Boldly I recommend to all this company.</div>
-                        <div class="info-box">
-                            <div class="thumb"><img src="images/resource/thumb-2.jpg" alt=""></div>
-                            <h5 class="name">Elena Gomes</h5>
-                            <span class="date">July 28 - 2018</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Testimonial block two -->
-                <div class="testimonial-block-two">
-                    <div class="inner-box">
-                        <div class="text">I got an excellent design for my future home, from cooperation i was very pleased, everything was done at the highest level.Boldly I recommend to all this company.</div>
-                        <div class="info-box">
-                            <div class="thumb"><img src="images/resource/thumb-3.jpg" alt=""></div>
-                            <h5 class="name">Aliza Norka</h5>
-                            <span class="date">July 28 - 2018</span>
+                @foreach ($clients as $item)
+                    <div class="testimonial-block-two">
+                        <div class="inner-box">
+                            <div class="text">I got an excellent design for my future home, from cooperation i was very pleased, everything was done at the highest level.Boldly I recommend to all this company.</div>
+                            <div class="info-box">
+                                <div class="thumb"><img src="storage/{{$item->picture}}" alt=""></div>
+                                <h5 class="name">{{$item->name}}</h5>
+                                <span class="date">July 28 - 2018</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
-                <!-- Testimonial block two -->
-                <div class="testimonial-block-two">
-                    <div class="inner-box">
-                        <div class="text">I got an excellent design for my future home, from cooperation i was very pleased, everything was done at the highest level.Boldly I recommend to all this company.</div>
-                        <div class="info-box">
-                            <div class="thumb"><img src="images/resource/thumb-2.jpg" alt=""></div>
-                            <h5 class="name">Elena Gomes</h5>
-                            <span class="date">July 28 - 2018</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Testimonial block two -->
-                <div class="testimonial-block-two">
-                    <div class="inner-box">
-                        <div class="text">I got an excellent design for my future home, from cooperation i was very pleased, everything was done at the highest level.Boldly I recommend to all this company.</div>
-                        <div class="info-box">
-                            <div class="thumb"><img src="images/resource/thumb-3.jpg" alt=""></div>
-                            <h5 class="name">Aliza Norka</h5>
-                            <span class="date">July 28 - 2018</span>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -201,16 +171,9 @@
             <div class="sponsors-outer">
                 <!--Sponsors Carousel-->
                 <ul class="sponsors-carousel owl-carousel owl-theme">
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/4.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/5.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/4.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="images/clients/5.png" alt=""></a></figure></li>
+                    @foreach ($companies as $item)
+                        <li class="slide-item"><figure class="image-box"><a href="#"><img src="storage/{{$item->picture}}" alt=""></a></figure></li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -278,59 +241,27 @@
             </div>
 
             <div class="row clearfix">
-                <!-- Team Block -->
-                <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <div class="image"><a href="team.html"><img src="images/resource/team-1.jpg" alt=""></a></div>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-                            </ul>
-                            <h3 class="name"><a href="team.html">Scott Grey</a></h3>
+                @foreach ($experts   as $item)
+                    <div class="team-block col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image"><a href="team.html"><img src="storage/{{$item->picture}}" alt=""></a></div>
+                                <ul class="social-links">
+                                    <li><a href="{{$item->facebook}}"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="{{$item->twitter}}"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="{{$item->gmail}}"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="{{$item->instagram}}"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="{{$item->whatsapp}}"><i class="fa fa-whatsapp"></i></a></li>
+                                </ul>
+                                <h3 class="name"><a href="team.html">{{$item->name}}</a></h3>
+                            </div>
+                            <span class="designation">{{$item->designation}}</span>
                         </div>
-                        <span class="designation">Architect</span>
                     </div>
-                </div>
+                @endforeach
 
-                <!-- Team Block -->
-                <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <div class="image"><a href="team.html"><img src="images/resource/team-2.jpg" alt=""></a></div>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-                            </ul>
-                            <h3 class="name"><a href="team.html">Russel Reed</a></h3>
-                        </div>
-                        <span class="designatiion">Project Manager</span>
-                    </div>
-                </div>
 
-                <!-- Team Block -->
-                <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <div class="image"><a href="team.html"><img src="images/resource/team-3.jpg" alt=""></a></div>
-                            <ul class="social-links">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-                            </ul>
-                            <h3 class="name"><a href="team.html">Cheryl Ray</a></h3>
-                        </div>
-                        <span class="designatiion">Interior Designer</span>
-                    </div>
-                </div>
+
 
             </div>
         </div>
