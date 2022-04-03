@@ -23,7 +23,6 @@ return new class extends Migration
             $table->text('location');
             $table->text('surface_area');
             $table->text('year_completed');
-            $table->text('gallery');
             $table->text('value');
             $table->text('architect');
             $table->text('short_description');
@@ -32,6 +31,9 @@ return new class extends Migration
             $table->string('picture_1');
             $table->string('picture_2');
             $table->string('picture_3');
+            $table->string('picture_slider_1');
+            $table->string('picture_slider_2');
+            $table->string('picture_slider_3');
             $table->timestamps();
         });
     }

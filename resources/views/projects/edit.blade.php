@@ -121,13 +121,29 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
-                                <label class="form-label">Gallery image</label>
-                                <div class="input-group input-group-outline mb-3">
-                                    <input type="file" name="gallery" class="form-control" autocomplete="picture_1">
+                                <div class="col-md-12">
+                                    <label class="form-label">Project Single Img 1</label>
+                                    <div class="input-group input-group-outline mb-3">
+                                        <input type="file" name="gallery" class="form-control" autocomplete="picture_1">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="form-label">Project Single Img 2</label>
+                                    <div class="input-group input-group-outline mb-3">
+                                        <input type="file" name="gallery" class="form-control" autocomplete="picture_1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="form-label">Project Single Img 3</label>
+                                    <div class="input-group input-group-outline mb-3">
+                                        <input type="file" name="gallery" class="form-control" autocomplete="picture_1">
+                                    </div>
+                                </div>
+                            </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="input-group input-group-outline mb-3">

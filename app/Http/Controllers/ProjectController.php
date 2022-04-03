@@ -15,7 +15,7 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::get();
-        return view('projects.index' , compact('projects'));
+        return view('projects.index', compact('projects'));
     }
 
     /**
@@ -53,7 +53,9 @@ class ProjectController extends Controller
             'picture_1'                 => ['required'],
             'picture_2'                 => ['required'],
             'picture_3'                 => ['required'],
-            'gallery'                   => ['required'],
+            'picture_Slider_1'          => ['required'],
+            'picture_Slider_2'          => ['required'],
+            'picture_Slider_3'          => ['required'],
         ]);
 
 
@@ -72,9 +74,13 @@ class ProjectController extends Controller
             'detail_description'            =>   $request->detail_description,
             'banner_image'                  =>   $request->file('banner_image')->store('project'),
             'picture_1'                     =>   $request->file('picture_1')->store('project'),
-            'picture_2'                     =>   $request->file('picture_1')->store('project'),
-            'picture_3'                     =>   $request->file('picture_2')->store('project'),
-            'gallery'                       =>   $request->file('gallery')->store('project'),
+            'picture_2'                     =>   $request->file('picture_2')->store('project'),
+            'picture_3'                     =>   $request->file('picture_3')->store('project'),
+
+            'picture_Slider_1'                     =>   $request->file('picture_Slider_1')->store('project'),
+            'picture_Slider_2'                     =>   $request->file('picture_Slider_2')->store('project'),
+            'picture_Slider_3'                     =>   $request->file('picture_Slider_3')->store('project'),
+
 
         ]);
         return redirect()->route('projects.index');
@@ -99,7 +105,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('projects.edit' ,compact('project'));
+        return view('projects.edit', compact('project'));
     }
 
     /**
