@@ -53,9 +53,9 @@ class ProjectController extends Controller
             'picture_1'                 => ['required'],
             'picture_2'                 => ['required'],
             'picture_3'                 => ['required'],
-            'picture_Slider_1'          => ['required'],
-            'picture_Slider_2'          => ['required'],
-            'picture_Slider_3'          => ['required'],
+            'picture_slider_1'          => ['required'],
+            'picture_slider_2'          => ['required'],
+            'picture_slider_3'          => ['required'],
         ]);
 
 
@@ -76,10 +76,9 @@ class ProjectController extends Controller
             'picture_1'                     =>   $request->file('picture_1')->store('project'),
             'picture_2'                     =>   $request->file('picture_2')->store('project'),
             'picture_3'                     =>   $request->file('picture_3')->store('project'),
-
-            'picture_Slider_1'                     =>   $request->file('picture_Slider_1')->store('project'),
-            'picture_Slider_2'                     =>   $request->file('picture_Slider_2')->store('project'),
-            'picture_Slider_3'                     =>   $request->file('picture_Slider_3')->store('project'),
+            'picture_slider_1'              =>   $request->file('picture_slider_1')->store('project'),
+            'picture_slider_2'              =>   $request->file('picture_slider_2')->store('project'),
+            'picture_slider_3'              =>   $request->file('picture_slider_3')->store('project'),
 
 
         ]);
