@@ -17,6 +17,7 @@ class Project extends Model
         'project_name',
         'surface_area',
         'year_completed',
+        'gallery',
         'value',
         'architect',
         'short_description',
