@@ -8,6 +8,9 @@ use App\Models\Slider;
 use App\Models\Specialization;
 use App\Models\Project;
 use App\Models\Expert;
+use App\Models\Client;
+use App\Models\Blog;
+use App\Models\Company;
 
 class MainController extends Controller
 {
@@ -17,13 +20,20 @@ class MainController extends Controller
         $sliders = Slider::get();
         $projects = Project::get();
         $experts = Expert::get();
+        $clients = Client::get();
+        $companies = Company::get();
+        $blogs = Blog::with('user')->get();
         $specializations = Specialization::get();
-        return view('welcome' , compact('about' , 'sliders' , 'specializations' , 'projects' , 'experts'));
+        return view('welcome', compact('about', 'sliders', 'specializations', 'projects', 'experts', 'clients', 'blogs', 'companies'));
     }
     public function about()
     {
         $about = About::first();
-        return view('about' , compact('about'));
+        $clients = Client::get();
+        $companies = Company::get();
+        $experts = Expert::get();
+        // $projects = Project::get();
+        return view('about', compact('about', 'clients', 'companies', 'experts'));
     }
     public function faq()
     {
@@ -43,11 +53,14 @@ class MainController extends Controller
     }
     public function project()
     {
-        return view('project');
+        // $about = About::first();
+        $projects = Project::first();
+        return view('project', compact('projects'));
     }
     public function project_details()
     {
-        return view('project_details');
+        $projects = Project::first();
+        return view('project_details', compact('projects'));
     }
     public function blogs()
     {
