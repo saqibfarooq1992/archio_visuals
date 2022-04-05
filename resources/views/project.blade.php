@@ -14,7 +14,7 @@
                      <div class="title-box">
 
 
-                         <h1>{{$projects->slider_title}}</h1>
+                         <h1>All Projects</h1>
                          <span class="title">{{$projects->slogan}}</span>
                      </div>
                      <ul class="bread-crumb clearfix">
@@ -46,9 +46,9 @@
                          <!-- Project Block -->
                          <div class="project-block all mix interior architecture landescape col-lg-4 col-md-6 col-sm-12">
                              <div class="image-box">
-                                 <figure class="image"><img src="storage/{{$projects->gallery}}" alt=""></figure>
+                                 <figure class="image"><img src="storage/{{$projects->picture_slider_1}}" alt=""></figure>
                                  <div class="overlay-box">
-                                     <h4><a href="project-detail.html">Laxury Homesss <br>Project</a></h4>
+                                     <h4><a href="project-detail.html">{{$projects->project_name}} <br>Project</a></h4>
                                      <div class="btn-box">
                                          <a href="images/gallery/2-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
                                          <a href="project-detail.html"><i class="fa fa-external-link"></i></a>
@@ -63,7 +63,7 @@
                              <div class="image-box">
                                  <figure class="image"><img src="images/gallery/2-2.jpg" alt=""></figure>
                                  <div class="overlay-box">
-                                     <h4><a href="project-detail.html">Laxury Home <br>Project</a></h4>
+                                     <h4><a href="project-detail.html">{{$projects->project_name}}<br>Project</a></h4>
                                      <div class="btn-box">
                                          <a href="images/gallery/2-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
                                          <a href="project-detail.html"><i class="fa fa-external-link"></i></a>
