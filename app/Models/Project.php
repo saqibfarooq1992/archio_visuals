@@ -25,6 +25,9 @@ class Project extends Model
         'picture_1',
         'picture_2',
         'picture_3',
-        'gallery',
+        'picture_slider_1',
+        'picture_slider_2',
+        'picture_slider_3',
+        'slug',
     ];
 }

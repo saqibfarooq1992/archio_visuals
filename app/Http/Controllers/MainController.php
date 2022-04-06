@@ -24,7 +24,7 @@ class MainController extends Controller
         $companies = Company::get();
         $blogs = Blog::with('user')->get();
         $specializations = Specialization::get();
-        return view('welcome' , compact('about' , 'sliders' , 'specializations' , 'projects' , 'experts' , 'clients' , 'blogs' , 'companies'));
+        return view('welcome', compact('about', 'sliders', 'specializations', 'projects', 'experts', 'clients', 'blogs', 'companies'));
     }
     public function about()
     {
@@ -32,7 +32,8 @@ class MainController extends Controller
         $clients = Client::get();
         $companies = Company::get();
         $experts = Expert::get();
-        return view('about' , compact('about' , 'clients' , 'companies' , 'experts'));
+        // $projects = Project::get();
+        return view('about', compact('about', 'clients', 'companies', 'experts'));
     }
     public function faq()
     {
@@ -52,11 +53,14 @@ class MainController extends Controller
     }
     public function project()
     {
-        return view('project');
+        // $about = About::first();
+        $projects = Project::first();
+        return view('project', compact('projects'));
     }
     public function project_details()
     {
-        return view('project_details');
+        $projects = Project::first();
+        return view('project_details', compact('projects'));
     }
     public function blogs()
     {

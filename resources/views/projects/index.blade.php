@@ -40,6 +40,7 @@
                             <td class="text-left">{{$item->year_completed}}</td>
                             <td class="text-left">{{($item->value)}}</td>
                             <td class="text-left">{{($item->architect)}}</td>
+                            <td class="text-left">{{($item->slug)}}</td>
                             <td class="text-left">
                               <a class="btn btn-link text-info text-gradient px-3 mb-0" href="">Show</a>
                               <a class="btn btn-link text-success text-gradient px-3 mb-0" href="{{route('projects.edit' , $item->id)}}">Edit</a>
