@@ -28,5 +28,6 @@ class Project extends Model
         'picture_slider_1',
         'picture_slider_2',
         'picture_slider_3',
+        'slug',
     ];
 }

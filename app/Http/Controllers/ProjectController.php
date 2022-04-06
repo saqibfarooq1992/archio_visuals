@@ -56,6 +56,7 @@ class ProjectController extends Controller
             'picture_slider_1'          => ['required'],
             'picture_slider_2'          => ['required'],
             'picture_slider_3'          => ['required'],
+            'slug'                      => ['required'],
         ]);
 
 
@@ -79,6 +80,7 @@ class ProjectController extends Controller
             'picture_slider_1'              =>   $request->file('picture_slider_1')->store('project'),
             'picture_slider_2'              =>   $request->file('picture_slider_2')->store('project'),
             'picture_slider_3'              =>   $request->file('picture_slider_3')->store('project'),
+            'slug'                          =>   $request->slug,
 
 
         ]);
@@ -120,6 +122,7 @@ class ProjectController extends Controller
         $project->title        = $request->title;
         $project->slogan       = $request->slogan;
         $project->project_name = $request->project_name;
+        $project->slug         = $request->slug;
 
         $project->save();
         return redirect()->route('projects.index');

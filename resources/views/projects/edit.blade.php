@@ -144,6 +144,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="input-group input-group-outline mb-3">
+                                    <label class="form-label">Slug</label>
+                                    <input type="text" name="slug" value="{{$project->slug}}" class="form-control" autocomplete="slug">
+                                </div>
+                            </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="input-group input-group-outline mb-3">

@@ -48,10 +48,10 @@
                              <div class="image-box">
                                  <figure class="image"><img src="storage/{{$projects->picture_slider_1}}" alt=""></figure>
                                  <div class="overlay-box">
-                                     <h4><a href="project-detail.html">{{$projects->project_name}} <br>Project</a></h4>
+                                     <h4><a href="{{$projects->slug}}">{{$projects->project_name}} <br>Project</a></h4>
                                      <div class="btn-box">
                                          <a href="images/gallery/2-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
-                                         <a href="project-detail.html"><i class="fa fa-external-link"></i></a>
+                                         <a href="{{$projects->slug}}"><i class="fa fa-external-link"></i></a>
                                      </div>
                                      <span class="tag">Architecture</span>
                                  </div>
