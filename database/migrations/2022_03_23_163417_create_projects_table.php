@@ -34,7 +34,7 @@ return new class extends Migration
             $table->string('picture_slider_1');
             $table->string('picture_slider_2');
             $table->string('picture_slider_3');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }
